@@ -1,6 +1,7 @@
 # PageRank usando EMR de AWS y Google Colab
 
 Ruben Huanca M., Israel Pancca M.
+
 04 Noviembre 2020
 
 ## Problema
@@ -29,11 +30,9 @@ Es un algoritmo utilizado para asignar de forma numérica la relevancia de los d
 
 ## Resultados
 
-Comparativa de PageRank usando EMR de AWS y Google Colab usando
-un grafo de 408 p´aginas y 567 aristas.
-A continuaci´on mostraremos los resultados de los Ranks obtenidos de las
-408 p´aginas
+Comparativa de PageRank usando EMR de AWS y Google Colab usando un grafo de 408 páginas y 567 aristas.
 
+### Tiempo de ejecución de PageRank usando EMR de AWS y Google Colab
 |              |      Recursos       | Características  | #Tiempo (seg) |
 | :----------: | :-----------------: | :--------------: | :-----------: |
 |  EMR de AWS  | 1 master y 2 slaves | 4 CPU, 16 GB RAM |      46       |
@@ -43,9 +42,22 @@ A continuaci´on mostraremos los resultados de los Ranks obtenidos de las
 A continuación mostraremos los resultados de los Ranks obtenidos de las 408 páginas
 
 ![alt text](pageRankAWS.PNG)
+
+# Conclusión
+Gracias al algoritmo PageRank se pudo obtener que página tiene mayor relevancia, además el Framework Spark aceleró los resultados obtenidos; obteniendo una diferencia de tiempo de aproximadamente de 18 por ciento en el uso de Google Colab. Es una diferencia que se podría aceptar, si uno no puede pagar un cluster en una nube.
+
 ## Source
 
 Los códigos del desarrollo lo pueden ver en la carpeta code donde estarán los 2 códigos:
 
 - pagerank_colab_SaveRDD.py : Código para Google colab
 - pagerank_sparkOriSave.py : Código para EMR AWS
+
+# Referencias
+- APACHE Spark. Examples. [Online]. Available: http://spark.apache.org/examples.html (Accessed: 03-Nov-2020)
+- Wikipedia. PageRank. [En línea]. Disponible en: https://es.wikipedia.org/wiki/PageRank (Accessed: 03-Nov-2020)
+- Web Scraping with lynx + cURL. Disponible en: https://siliconheaven.info/webscraping-curl-lynx/#gsc.tab=0 (Accessed: 03-Nov-2020)
+- Google Colab. [Online]. Available: https://colab.research.google.com/ (Accessed: 03-Nov-2020)
+- AWS. Elastic MapReduce. [Online]. Available: https://aws.amazon.com/emr/ (Accessed: 03-Nov-2020)
+- Mining of Massive Datasets. The 3rd edition of the book. [Online]. Available: http://mmds.org/ (Accessed: 03-Nov-2020)
+- Breadth First Search or BFS for a Graph. Python3. [Online]. Available: https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/ (Accessed: 03-Nov-2020)
