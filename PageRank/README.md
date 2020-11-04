@@ -41,7 +41,8 @@ Comparativa de PageRank usando EMR de AWS y Google Colab usando un grafo de 408 
 
 A continuación mostraremos los resultados de los Ranks obtenidos de las 408 páginas
 
-![alt text](pageRankAWS.PNG)
+<!-- ![alt text](pageRankAWS.PNG) -->
+<img src="pageRankAWS.PNG" width="80%" height="80%">
 
 # 4. Conclusión
 Gracias al algoritmo PageRank se pudo obtener que página tiene mayor relevancia, además el Framework Spark aceleró los resultados obtenidos; obteniendo una diferencia de tiempo de aproximadamente de 18 por ciento en el uso de Google Colab. Es una diferencia que se podría aceptar, si uno no puede pagar un cluster en una nube.
@@ -50,8 +51,8 @@ Gracias al algoritmo PageRank se pudo obtener que página tiene mayor relevancia
 
 Los códigos del desarrollo lo pueden ver en la carpeta [code](code) donde estarán los 2 códigos:
 
-- pagerank_colab_SaveRDD.py : Código para Google colab
-- pagerank_sparkOriSave.py : Código para EMR AWS
+- [Código para Google colab](code/pagerank_colab_SaveRDD.py)
+- [Código para EMR AWS](code/pagerank_sparkOriSave.py)
 
 # 6. Referencias
 - APACHE Spark. Examples. [Online]. Available: http://spark.apache.org/examples.html (Accessed: 03-Nov-2020)
