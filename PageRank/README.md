@@ -1,6 +1,6 @@
 # PageRank usando EMR de AWS y Google Colab
 
-Ruben Huanca M., Israel Pancca M.
+[Ruben Huanca M.](https://github.com/RubenHuanca), Israel Pancca M.
 
 04 Noviembre 2020
 
