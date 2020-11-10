@@ -1,0 +1,9 @@
+maria a,b
+juan a,a,c
+marta a,b,c
+casa a,c,c
+mesa a,b,c
+aeropuerto a,c,c
+taza c,b,c
+avión a
+libro a,a,c
