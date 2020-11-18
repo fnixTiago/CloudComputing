@@ -14,13 +14,14 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Resultado from "./Resultado.jsx";
-
+import { subirData } from "../../../actions/uploadAction.js";
 class ShowList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       texto: "",
       mapitaII: new Map(),
+      links: new Map(),
       mapitaPR: new Map(),
       resultados: new Map(),
       mapRes: {},
@@ -73,8 +74,8 @@ class ShowList extends React.Component {
       var arrayDeCadenas = line.split(" ");
       let primero = arrayDeCadenas[0];
       var segundo = arrayDeCadenas[1];
-      // console.log("primero", primero)
-      // console.log("segundo", segundo)
+      console.log("primero", primero)
+      console.log("segundo", segundo)
       mapita.set(primero, parseFloat(segundo));
     });
     this.setState({
@@ -82,6 +83,7 @@ class ShowList extends React.Component {
     });
   };
   handleFilePR = (event) => {
+    console.log("pageRank")
     var file = event.target.files[0];
     if (!file) return;
     var reader = new FileReader();
@@ -102,7 +104,7 @@ class ShowList extends React.Component {
     let todos = [];
     for (let i = 0; i < palabras.length; i++) {
       let vec = this.state.mapitaII.get(palabras[i]);
-      // console.log("--vec", vec);
+      console.log("--vec", vec);
       if (vec != undefined) {
         for (var k = 0; k < vec.length; k++) {
           todos.push(vec[k]);
@@ -115,19 +117,11 @@ class ShowList extends React.Component {
     // // console.log("mapita", ma)
     todos.map((item) => {
       if (m.get(item) === undefined) {
-        var re= this.state.mapitaPR.get(item)
-        if(re == undefined){
-        m.set(item, 0.1);
-
-        }
-        else{
-          m.set(item, re);
-
-        }
+        m.set(item, this.state.mapitaPR.get(item));
       } else {
         let val = m.get(item);
         m.delete(item);
-        m.set(item,  this.state.mapitaPR.get(item));
+        m.set(item, val + this.state.mapitaPR.get(item));
       }
     });
     // For keys, we don't need an equals case, because identical keys overwrite
@@ -148,8 +142,8 @@ class ShowList extends React.Component {
     // console.log("array values",  [ ...data.values() ]);
     // console.log("array entries",  [ ...data.entries() ]);
     _.map([...data.entries()], (entity, key) => {
-      // console.log("entity", entity);
-      // console.log("key", key);
+      console.log("entity", entity);
+      console.log("key", key);
       // console.log("v",v)
       var k = entity[0];
       var v = entity[1];
@@ -166,11 +160,14 @@ class ShowList extends React.Component {
       [name]: value,
     });
   };
-
+  subirII=(e)=>{
+    e.preventDefault()
+    this.subirData(this.state.links,"links");
+  }
   render() {
-    // console.log("mapRes", this.state.mapRes);
+    console.log("mapRes", this.state.mapRes);
     console.log("mapitaII", this.state.mapitaII);
-    console.log("mapitaPR", this.state.mapitaPR);
+    console.log("mapitaPR", this.state.mapitaRR);
     // Object.fromEntries ✅
     const obj = Object.fromEntries(this.state.mapitaII);
 
@@ -181,11 +178,11 @@ class ShowList extends React.Component {
       <div className={classes.sections}>
         <div className={classes.container}>
           <div className={classes.title}>
-            <h2>Busqueda</h2>
+            <h2>Subir Data</h2>
           </div>
 
           <GridContainer justify="center">
-            <GridItem xs={12} sm={4} md={4}>
+            <GridItem xs={12} sm={6} md={6}>
               <label className="fileContainer">
                 Subir Indice Invertido...
                 <input
@@ -196,7 +193,12 @@ class ShowList extends React.Component {
                 />
               </label>
             </GridItem>
-            <GridItem xs={12} sm={4} md={4}>
+            {/* <GridItem xs={12} sm={6} md={6}>
+              <Button onClick={e =>this.subirII(e)}>
+                Subir
+              </Button>
+            </GridItem> */}
+            <GridItem xs={12} sm={6} md={6}>
               <label className="fileContainer">
                 Subir Doc. PageRank...
                 <input
@@ -207,63 +209,19 @@ class ShowList extends React.Component {
                 />
               </label>
             </GridItem>
-            
-            <GridItem xs={12} sm={10} md={10}>
-              <CustomInput
-                labelText="Buscar"
-                formControlProps={{
-                  fullWidth: true,
-                  className: classes.customFormControlClasses,
-                }}
-                inputProps={{
-                  required: true,
-                  name: "texto",
-                  onChange: this.handleChange,
-                  // startAdornment: (
-                  //   <InputAdornment
-                  //     position="start"
-                  //     className={classes.inputAdornment}
-                  //   >
-                  //     <InsertDriveFile className={classes.inputIconsColor} />
-                  //   </InputAdornment>
-                  // ),
-                  placeholder: "ingrese su texto",
-                }}
-              />
+            <GridItem xs={12} sm={6} md={6}>
+              <label className="fileContainer">
+                Subir urls...
+                <input
+                  type="file"
+                  name="url"
+                  onChange={this.handleFileII}
+                  style={{ color: "#9c27b0" }}
+                />
+              </label>
             </GridItem>
-            <GridItem xs={12} sm={2} md={2} style={{ "padding-top": "16px" }}>
-              <Button color="primary" onClick={(e) => this.enviar(e)}>
-                Buscar
-              </Button>
-            </GridItem>
-            {/* {_.map(this.state.resultados, (val, key) => {
-              return (
-                <GridItem xs={12} sm={12} md={12}>
-                  <Card>
-                    <CardHeader>El documento es {key}</CardHeader>
-                    <CardContent>El contenido es {val}</CardContent>
-                  </Card>
-                </GridItem>
-              );
-            })} */}
-            <GridItem xs={12} sm={12} md={12}>
-              <Resultado dataTotal={lista} />
-            </GridItem>
-
-            {/* {_.map(lista, (val, key) => {
-              return (
-                <div>
-                  <GridItem xs={12} sm={12} md={12}>
-                    <Card>
-                      <CardHeader>El documento es {key}</CardHeader>
-                      <CardContent>El contenido es {val}</CardContent>
-                    </Card>
-                  </GridItem>
-                  <br />
-                  <br />
-                </div>
-              );
-            })} */}
+           
+           
           </GridContainer>
         </div>
       </div>

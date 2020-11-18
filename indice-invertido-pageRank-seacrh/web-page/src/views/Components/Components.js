@@ -28,6 +28,7 @@ import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
 import ShowList from "./Sections/ShowList.jsx";
+import SubirData from "./Sections/SubirData.jsx";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -56,7 +57,7 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>Sistema de busquedas utilizando ÍndiceInvertido y pageRank</h1>
                 <h3 className={classes.subtitle}>
-                  A Badass Material-UI Kit based on Material Design.
+                  Desarrollado por Ruben Huanca y Israel Pancca
                 </h3>
               </div>
             </GridItem>
@@ -65,8 +66,9 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
+        {/* <SubirData/> */}
         <ShowList/>
-        <SectionBasics />
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
         <SectionPills />
@@ -84,7 +86,7 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload />
+        <SectionDownload /> */}
       </div>
       <Footer />
     </div>
