@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-dni-pod
+  labels:
+    app: api-dni
+spec:
+  containers:
+  - name: api-dni
+    image: rubenhm/api-dni:1.0
+    ports:
+    - containerPort: 80

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-hello-deployment
+  name: api-dni-deployment
   labels:
-    app: api-hello
+    app: api-dni
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: api-hello
+      app: api-dni
   template:
     metadata:
       labels:
-        app: api-hello
+        app: api-dni
     spec:
       containers:
-      - name: api-hello
-        image: rubenhm/api-hello:1.0
+      - name: api-dni
+        image: rubenhm/api-dni:1.0
         ports:
-        - containerPort: 8080
+        - containerPort: 80

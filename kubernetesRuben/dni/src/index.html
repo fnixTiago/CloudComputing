@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+       
+
+        .centrado {
+            background: white;
+            margin: auto;
+            width: 40%;
+            border: 3px solid #73AD21;
+            text-align-last: center;
+            height: 230px;
+        }
+        ;
+
+        .resultado {
+            margin: 45px;
+        }
+        .fondo {
+            background-image: url("https://lh3.googleusercontent.com/proxy/5xWjj3nAi9sc_jHD7y83QJciSdnuY5vllznznq7uVTBWwX2LgjL7NgyH7SYssX1wk1hW-WwDTYhWPloKU0BPgrkGa2UWH3-0ILp25SIvDTbdAeXP5md-w2uXM-KFdZXJ89VlH0r9");
+        }
+
+        ;
+    </style>
+</head>
+
+<body class="fondo">
+
+    <div>
+        <div class="centrado">
+            <h3>
+                Busca personas con su DNI
+            </h3>
+            <input type="text" id="mydni" value="">
+            <button onclick="myFunction()">Buscar</button>
+
+
+            <div class="mypanel" style="margin: 45px;">
+               
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mydni").value;
+            // console.log("DNIIII", x)
+            //   document.getElementById("demo").innerHTML = x;
+            $.getJSON('https://dni.optimizeperu.com/api/persons/' + x, function (data) {
+
+                var text = `Nombres: ${data.name}<br>
+                Apellidos: ${data.first_name} ${data.last_name}<br>`
+                $(".mypanel").html(text);
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
