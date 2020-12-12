@@ -40,3 +40,38 @@ tenemos que agregar una verificación si ya se optimizo la imagen porque puede s
  ```
  if (data.metadata && data.metadata.optimized) 
  ```
+Creamos una carpeta temporal para las imágenes optimizadas
+```
+const workingDir = join(tmpdir(), "thumbs");
+```
+Descargamos el archivo original
+```
+await file.download({ destination });
+```
+Recorremos el vector sizes = [480,640,1200] para poder crear las imágenes optimizadas
+```
+const resizesPromises = sizes.map((size) => 
+```
+
+Subiremos los archivos al storage 
+```
+const uploadPromises = files.map((file) => {
+```
+Eliminaremos la carpeta temporal que creamos
+```
+return fs.remove(workingDir);
+```
+
+El código completo se encuentra en el siguiente link:
+[Código cloud Function](functions/index.js)
+
+
+Para poder ejecutar el proyecto se utilizo node.js
+```
+npm install
+```
+
+Dependencias 
+```
+npm i @google-cloud/storage fs-extra sharp --save
+```
