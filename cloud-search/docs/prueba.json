@@ -1,0 +1,142 @@
+{
+    "status": {
+        "rid": "oJCU7OcujAEK1Beo",
+        "time-ms": 51
+    },
+    "hits": {
+        "found": 4,
+        "start": 0,
+        "hit": [
+            {
+                "id": "tt0047437",
+                "fields": {
+                    "rating": "7.7",
+                    "genres": [
+                        "Comedy",
+                        "Drama",
+                        "Romance"
+                    ],
+                    "plot": "A playboy becomes interested in the daughter of his family's chauffeur. But it's his more serious brother who would be the better man for her.",
+                    "release_date": "1954-09-09T00:00:00Z",
+                    "title": "Sabrina",
+                    "rank": "2381",
+                    "running_time_secs": "6780",
+                    "directors": [
+                        "Billy Wilder"
+                    ],
+                    "image_url": "http://ia.media-imdb.com/images/M/MV5BMjIyMDAxMTExMV5BMl5BanBnXkFtZTgwOTc0ODEzMDE@._V1_SX400_.jpg",
+                    "year": "1954",
+                    "actors": [
+                        "Humphrey Bogart",
+                        "Audrey Hepburn",
+                        "William Holden"
+                    ],
+                    "_score": "9.72869"
+                },
+                "highlights": {
+                    "actors": "Humphrey Bogart Audrey Hepburn William Holden",
+                    "directors": "Billy Wilder",
+                    "plot": "A playboy becomes interested in the daughter of his family's chauffeur. But it's his more serious brother who would be the better man for her.",
+                    "title": "*#*Sabrina*%*"
+                }
+            },
+            {
+                "id": "tt0114319",
+                "fields": {
+                    "rating": "6.0",
+                    "genres": [
+                        "Comedy",
+                        "Drama"
+                    ],
+                    "plot": "An ugly duckling having undergone a remarkable change, still harbors feelings for her crush: a carefree playboy, but not before his business-focused brother has something to say about it.",
+                    "release_date": "1995-12-15T00:00:00Z",
+                    "title": "Sabrina",
+                    "rank": "3347",
+                    "running_time_secs": "7620",
+                    "directors": [
+                        "Sydney Pollack"
+                    ],
+                    "image_url": "http://ia.media-imdb.com/images/M/MV5BMTYxMTg3OTYyOF5BMl5BanBnXkFtZTcwODE3NTYxMQ@@._V1_SX400_.jpg",
+                    "year": "1995",
+                    "actors": [
+                        "Harrison Ford",
+                        "Julia Ormond",
+                        "Greg Kinnear"
+                    ],
+                    "_score": "9.72869"
+                },
+                "highlights": {
+                    "actors": "Harrison Ford Julia Ormond Greg Kinnear",
+                    "directors": "Sydney Pollack",
+                    "plot": "An ugly duckling having undergone a remarkable change, still harbors feelings for her crush: a carefree playboy, but not before his business-focused brother has something to say about it.",
+                    "title": "*#*Sabrina*%*"
+                }
+            },
+            {
+                "id": "tt2358891",
+                "fields": {
+                    "rating": "7.5",
+                    "genres": [
+                        "Comedy",
+                        "Drama"
+                    ],
+                    "plot": "The story of an aging writer who bitterly recollects his passionate, lost youth. A portrait of today's Rome.",
+                    "release_date": "2013-05-21T00:00:00Z",
+                    "title": "La grande bellezza",
+                    "rank": "1179",
+                    "running_time_secs": "8520",
+                    "directors": [
+                        "Paolo Sorrentino"
+                    ],
+                    "image_url": "http://ia.media-imdb.com/images/M/MV5BMTc2MDQ1MDEzN15BMl5BanBnXkFtZTcwODE3ODk0OQ@@._V1_SX400_.jpg",
+                    "year": "2013",
+                    "actors": [
+                        "Toni Servillo",
+                        "Carlo Verdone",
+                        "Sabrina Ferilli"
+                    ],
+                    "_score": "7.1354523"
+                },
+                "highlights": {
+                    "actors": "Toni Servillo Carlo Verdone *#*Sabrina*%* Ferilli",
+                    "directors": "Paolo Sorrentino",
+                    "plot": "The story of an aging writer who bitterly recollects his passionate, lost youth. A portrait of today's Rome.",
+                    "title": "La grande bellezza"
+                }
+            },
+            {
+                "id": "tt2378191",
+                "fields": {
+                    "rating": "4.2",
+                    "genres": [
+                        "Horror",
+                        "Thriller"
+                    ],
+                    "plot": "A single mother moves into a new house with her daughter. Soon after the young girl has her first baby tooth fall off, she begins to recount that she is having nocturnal visits by a tooth fairy. It seems the house has a sinister history.",
+                    "release_date": "2012-08-24T00:00:00Z",
+                    "title": "Fairytale",
+                    "rank": "3870",
+                    "running_time_secs": "5040",
+                    "directors": [
+                        "Christian Bisceglia",
+                        "Ascanio Malgarini"
+                    ],
+                    "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQxNDgyMTY0N15BMl5BanBnXkFtZTcwNzg2NzE1OQ@@._V1_SX400_.jpg",
+                    "year": "2012",
+                    "actors": [
+                        "Harriet MacMasters-Green",
+                        "Sabrina Jolie Perez",
+                        "Jarreth J. Merz"
+                    ],
+                    "_score": "5.9664574"
+                },
+                "highlights": {
+                    "actors": "Harriet MacMasters-Green *#*Sabrina*%* Jolie Perez Jarreth J. ",
+                    "directors": "Christian Bisceglia Ascanio Malgarini",
+                    "plot": "A single mother moves into a new house with her daughter. Soon after the young girl has her first baby tooth fall off, she begins to recount that she is having nocturnal visits by a tooth fairy. It seems the house has a sinister history.",
+                    "title": "Fairytale"
+                }
+            }
+        ]
+    }
+}

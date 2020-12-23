@@ -1,0 +1,24 @@
+[
+    {
+        "imagen":"video1.jpg",
+        "image_url": "https...",
+        "name": "video1.txt",
+        "lista": [
+            "barco",
+            "persona",
+            "perro"
+        ]
+    } ,
+    {
+        "imagen":"video2.jpg",
+        "name": "video2.txt",
+        "lista": [
+            "persona",
+            "perro"
+        ]
+    } 
+]
+
+busqueda https://www.youtube.com/watch?v=mdj8RQhqOEg&t=377s&ab_channel=AmazonWebServices
+
+https://search-cloud-movies-zkeef6npwlljkwlydjpyfmcftm.sa-east-1.cloudsearch.amazonaws.com/2013-01-01/search?q=Sabrina&return=_all_fields
